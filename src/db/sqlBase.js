@@ -19,7 +19,7 @@ let db = knex(sqliteOptions);
 try {
   let exists = await db.schema.hasTable("products");
   if (exists) {
-    console.log("Tabla products existente");
+    console.log("Tabla de Productos Encontrada");
   } else {
     await db.schema.createTable("products", (table) => {
       table.primary("id");
@@ -31,7 +31,7 @@ try {
   }
   let chat = await db.schema.hasTable("chat");
   if (chat) {
-    console.log("Chat existente");
+    console.log("Chat encontrado");
   } else {
     await db.schema.createTable("chat", (table) => {
       table.string("user");
